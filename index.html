@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.pink.min.css"
+    >
+    <title>Moneger</title>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+<main class="container">
+    <nav>
+        <ul>
+            <li><h1 id="greeting-box"></h1></li>
+        </ul>
+        <ul>
+            <li><input id="rst-dep-key" role="button" type="submit" value="Reset DEPLOYMENT ID"/></li>
+        </ul>
+    </nav>
+    <div class="grid">
+        <article id="debit_card">
+            <h4>Debit</h4>
+            <div role="group">
+                <select name="select" id="debit-select"
+                        aria-label="Select" required>
+                    <option selected disabled value="">Particular</option>
+                </select>
+                <input placeholder="Amount" class="amount-input" name="amount" min="0" step="1" value="0"/>
+                <input placeholder="Remark" class="remark-input" type="text"/>
+            </div>
+            <button class="outline" id="add-debit" style="margin: 0 auto; display: block;">Add</button>
+        </article>
+        <article id="credit_card">
+            <h4>Credit</h4>
+            <div role="group">
+                <select name="select" id="credit_select"
+                        aria-label="Select" required>
+                    <option selected disabled value="">Particular</option>
+                </select>
+                <input placeholder="Amount" class="amount-input" name="amount" min="0" step="1" value="0"/>
+                <input placeholder="Remark" class="remark-input" type="text"/>
+
+            </div>
+            <button class="outline" id="add-credit" style="margin: 0 auto; display: block;">Add</button>
+        </article>
+    </div>
+
+    <div class="grid">
+        <article>
+            <h4>Transaction Description</h4>
+            <input id="description-input" type="text" placeholder="Description"/>
+            <button class="center-aligned" id="submit-btn" style="margin: 0 auto; display: block;">Submit transaction
+            </button>
+        </article>
+    </div>
+    <article>
+        <h4>Ledger sheet</h4>
+        <div role="group">
+            <select id="ledger-account" required></select>
+            <!--            <input placeholder="Amount" class="amount-input" name="amount" min="0" step="1" value="0"/>-->
+            <!--            <input placeholder="Remark" class="remark-input" type="text"/>-->
+
+        </div>
+        <table id="transaction-table">
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Particular</th>
+                <th>Debit</th>
+                <th>Credit</th>
+                <th>Balance</th>
+            </tr>
+            </thead>
+            <tbody id="transaction-ledger-body">
+            <tr>
+                <td colspan="5" style="text-align: center">Loading...</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </article>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.9.0/dist/axios.min.js"></script>
+    <script src="index.js" type="module"></script>
+</main>
+</body>
+</html>

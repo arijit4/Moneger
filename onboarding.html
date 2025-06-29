@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>On-boarding</title>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.pink.min.css"
+    >
+    <title>Moneger</title>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+</head>
+<body>
+<article style="width: 75%; margin: 0 auto;">
+    <h3>Welcome to Moneger</h3>
+    <p>
+        Moneger is a simple and easy to use online accounting software.
+    </p>
+
+    <input id="user-name-field" name="Username" placeholder="What should I call you?"/>
+    <div role="group">
+        <input id="dep-id-field" name="Deployment ID" placeholder="Enter the Deployment ID"/>
+        <input id="dep-id-confirm" type="submit" value="Confirm"/>
+    </div>
+    <article id="faq-card">
+        <h6>FAQs</h6>
+    </article>
+</article>
+<script src="onboarding.js" type="module"></script>
+</body>
+</html>
