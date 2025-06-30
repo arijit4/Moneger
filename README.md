@@ -4,3 +4,4 @@
 3. Copy js code from the`DB_Code.js` file and paste that into the `Code.gs` file.
 
 ![img.png](screenshots/img.png)
+[DB_Code.js](./DB_Code.js)

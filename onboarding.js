@@ -4,7 +4,7 @@ const faqs = [
         "content": "Follow the below easy steps to continue. Don't worry, you just need to do these only once." + "\n" +
             "- Create a new `Google Sheet` into your Google Drive. Use the WebApp of Google Sheet as App-script may not be available in other\n" +
             "- Click `Extensions > App Script`\n" +
-            "- Copy js code from the`DB_Code.js` file and paste that into the `Code.gs` file.\n" +
+            "- Copy the code from the [DB_Code.js](./DB_Code.js) file and paste that into the `Code.gs` file.\n" +
             "- Click `Deploy > New deployment`\n" +
             "- Set `Select type` as `Web app`\n" +
             "- Set `Who has access` to `Anyone`\n" +
