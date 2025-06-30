@@ -2,16 +2,18 @@ const faqs = [
     {
         "label": "How to get the DB-URL?",
         "content": "Follow the below easy steps to continue. Don't worry, you just need to do these only once." + "\n" +
-            "- Create a new `Google Sheet` into your Google Drive. Use the WebApp of Google Sheet as App-script may not be available in other\n" +
-            "- Click `Extensions > App Script`\n" +
-            "- Copy the code from the [DB_Code.js](./DB_Code.js) file and paste that into the `Code.gs` file.\n" +
-            "- Click `Deploy > New deployment`\n" +
-            "- Set `Select type` as `Web app`\n" +
-            "- Set `Who has access` to `Anyone`\n" +
-            "- At last, click `Deploy`\n" +
-            "- Copy the `Deployment ID` that you see now.\n" +
-            "- Paste it in the `Deployment ID` field above\n" +
-            "Now you can use the app."
+            "1. Create a new `Google Sheet` into your Google Drive. Use the WebApp of Google Sheet as App-script may not be available in other\n" +
+            "2. Click `Extensions > App Script`\n" +
+            "3. Copy the code from the [DB_Code.js] file and paste that into the `Code.gs` file and save the file.\n" +
+            "4. Click `Deploy > New deployment`\n" +
+            "5. Set `Select type` as `Web app`\n" +
+            "6. Set `Who has access` to `Anyone`\n" +
+            "7. At last, click `Deploy`\n" +
+            "8. Copy the `Deployment ID` that you see now.\n" +
+            "9. Paste it in the `Deployment ID` field above\n" +
+            "10. Now you can use the app.\n" +
+            "\n" +
+            "[Db_Code.js]: ./Db_Code.js"
     },
     {
         "label": "Is this app safe?",
