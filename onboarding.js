@@ -43,7 +43,13 @@ faqs.map(faq => {
 })
 
 $('#dep-id-confirm').click(function () {
-    localStorage.setItem(keys.development, $('#dep-id-field').val())
-    localStorage.setItem(keys.user_name, $('#user-name-field').val())
-    window.location.href = 'index.html'  // Add this line to redirect
+    const dep_id = $('#dep-id-field').val()
+
+    if (dep_id !== '' || dep_id.length < 10) {
+        localStorage.setItem(keys.development, dep_id)
+        localStorage.setItem(keys.user_name, $('#user-name-field').val())
+        window.location.href = 'index.html'  // Add this line to redirect
+    } else {
+        alert('Please enter a valid DEPLOYMENT ID')
+    }
 })
