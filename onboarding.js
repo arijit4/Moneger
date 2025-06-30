@@ -4,6 +4,7 @@ const faqs = [
         "content": "Follow the below easy steps to continue. Don't worry, you just need to do these only once." + "\n" +
             "1. Create a new `Google Sheet` into your Google Drive. Use the WebApp of Google Sheet as App-script may not be available in other\n" +
             "2. Click `Extensions > App Script`\n" +
+            "3. Delete any existing code in the `Code.gs` file\n" +
             "3. Copy the code from the [DB_Code.js] file and paste that into the `Code.gs` file and save the file.\n" +
             "4. Click `Deploy > New deployment`\n" +
             "5. Set `Select type` as `Web app`\n" +
@@ -45,9 +46,9 @@ faqs.map(faq => {
 })
 
 $('#dep-id-confirm').click(function () {
-    const dep_id = $('#dep-id-field').val()
+    const dep_id = $('#dep-id-field').val().trim()
 
-    if (dep_id.trim().length > 10) {
+    if (isValidGASDeploymentId(dep_id) && dep_id.trim().length > 10) {
         localStorage.setItem(keys.development, dep_id)
         localStorage.setItem(keys.user_name, $('#user-name-field').val())
         window.location.href = 'index.html'  // Add this line to redirect
@@ -55,3 +56,15 @@ $('#dep-id-confirm').click(function () {
         alert('Please enter a valid DEPLOYMENT ID')
     }
 })
+
+function isValidGASDeploymentId(id) {
+    // Must be a string
+    if (typeof id !== 'string') return false;
+
+    // Regex:
+    // ^AKfy → must start with "AKfy"
+    // [A-Za-z0-9_-]+ → one or more URL-safe Base64 characters
+    // $ → end of string
+    const re = /^AKfy[A-Za-z0-9_-]+$/;
+    return re.test(id);
+}
