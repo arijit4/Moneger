@@ -1,5 +1,5 @@
 ### Setup your database
-Follow the below easy steps to continue. Don't worry, you just need to do these only once." + "
+Follow the below easy steps to continue. Don't worry, you just need to do these only once.
 1. Create a new `Google Sheet` into your Google Drive. Use the WebApp of Google Sheet as App-script may not be available in other
 2. Click `Extensions > App Script`
 3. Copy the code from the [DB_Code.js] file and paste that into the `Code.gs` file and save the file.
@@ -11,4 +11,4 @@ Follow the below easy steps to continue. Don't worry, you just need to do these 
 9. Paste it in the `Deployment ID` field above
 10. Now you can use the app.
 
-[Db_Code.js]: ./Db_Code.js
+[DB_Code.js]: ./DB_Code.js

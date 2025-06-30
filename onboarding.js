@@ -13,7 +13,7 @@ const faqs = [
             "9. Paste it in the `Deployment ID` field above\n" +
             "10. Now you can use the app.\n" +
             "\n" +
-            "[Db_Code.js]: ./Db_Code.js"
+            "[DB_Code.js]: ./DB_Code.js"
     },
     {
         "label": "Is this app safe?",
